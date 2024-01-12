@@ -1,0 +1,1 @@
+let qualities = ["TEXT", "TEXT"]

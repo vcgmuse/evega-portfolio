@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #78888f;
+  --main-font-color: #f2f2f2;
+  --title-font-color: #fff;
+  --dark-translucent: rgba(0, 0, 0, 0.75);
+  --img-bg-color: rgba(141, 169, 184, 0.45);
+  --img-border-color: #99aab5;
+  --box-drop-shade: #000;
+}
+nav {
+  align-self: flex-start;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--main-font-color);
+}
+a:active,
+a:visited,
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+#bio {
+  padding: 3rem 0;
+  background-color: var(--img-bg-color);
+  border-radius: 30px;
+}
+.banner {
+  position: absolute;
+  content: '';
+  background-color: rgba(255, 0, 0, 0.25);
+  height: 75px;
+  width: calc(100% - 2rem);
+  align-self: center;
+  z-index: -1;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 3rem 0.5rem;
+}
+.profile {
+  padding: 0 1rem;
+}
+.profile .left {
+  display: flex;
+  align-items: center;
+}
+.profile .left p {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-indent: 16px;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  max-height: 160px;
+  min-width: 170px;
+  max-width: 195px;
+  /* outline: 1px solid var(--dark-translucent); */
+  text-shadow: 0px 1px 1px var(--dark-translucent);
+  border-radius: 5px;
+  line-height: 1.2rem;
+  z-index: 1;
+}
+.profile img {
+  height: 120px;
+  border-radius: 20px;
+  transform: scaleX(-100%);
+  filter: drop-shadow(5px 5px 1px var(--box-drop-shade));
+}
+
+.profile .right {
+  padding: 1rem;
+}
+.profile .right .top {
+  font-size: 1.5rem;
+}
+.profile .right .mid {
+  border-top: 5px solid var(--img-border-color);
+}
+.question {
+    font-size: 32px;
+    align-self: center;
+}
+
+.code-block {
+  background-color: var(--dark-translucent);
+  padding: 10px 35px;
+  font-weight: 800;
+  margin: 0 3rem;
+  border-radius: 10px;
+}
+
+.code-block span {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  width: fit-content;
+}
+.purple {
+  color: purple;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: lightskyblue;
+}
+.yellow {
+  color: yellow;
+}
