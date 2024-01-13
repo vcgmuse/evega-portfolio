@@ -1,1 +1,3 @@
-let qualities = ["TEXT", "TEXT"]
+let code = {
+    test : {}
+}

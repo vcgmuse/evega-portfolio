@@ -11,6 +11,7 @@
   --img-bg-color: rgba(141, 169, 184, 0.45);
   --img-border-color: #99aab5;
   --box-drop-shade: #000;
+  --banner-bg-color: rgba(255, 0, 0, 0.25)
 }
 nav {
   align-self: flex-start;
@@ -26,6 +27,28 @@ body {
   background-color: var(--bg-color);
   color: var(--main-font-color);
 }
+section .title {
+    align-self: flex-start; 
+    font-size:32px;
+    padding: .5rem 0rem;
+    
+}
+section .title::after, .user-link::after{
+    content: "{";
+    margin-left: .5rem;
+    color: yellow;
+}
+section .site::after{
+    content: "}, ";
+    margin-left: .5rem;
+    font-size: 32px;
+    color: yellow;
+}
+section .closing-brace::after {
+    content: "}";
+    font-size: 48px;
+    color: yellow;
+}
 a:active,
 a:visited,
 a:link {
@@ -40,13 +63,18 @@ a:link {
 #coding {
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem
+    margin: 1rem 1rem;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: var(--dark-translucent);
+    border-radius: 30px;
   }
   #coding ul{
     display: flex;
     flex-direction: column;
     gap: .5rem;
     list-style: none;
+    margin-left: 1.5rem;
   }
   #coding ul li ul li {
     display: flex;
@@ -57,7 +85,7 @@ a:link {
     gap: 1rem;
   }
   .user-link{
-    font-size: 32px;
+    font-size: 28px;
   }
   .link-img{
     height: 75px;
@@ -68,10 +96,12 @@ a:link {
 .banner {
   position: absolute;
   content: '';
-  background-color: rgba(255, 0, 0, 0.25);
-  height: 75px;
+  background-color: var(--banner-bg-color);
+  height: 120px;
   width: calc(100% - 2rem);
+  max-width: 315px;
   align-self: center;
+  border-radius: 15px;
   z-index: -1;
 }
 .profile {
@@ -103,7 +133,6 @@ main {
   max-height: 160px;
   min-width: 170px;
   max-width: 195px;
-  /* outline: 1px solid var(--dark-translucent); */
   text-shadow: 0px 1px 1px var(--dark-translucent);
   border-radius: 5px;
   line-height: 1.2rem;
@@ -113,7 +142,6 @@ main {
   height: 120px;
   border-radius: 20px;
   transform: scaleX(-100%);
-  filter: drop-shadow(5px 5px 1px var(--box-drop-shade));
 }
 
 .profile .right {
@@ -131,11 +159,13 @@ main {
 }
 
 .code-block {
+    align-self: flex-start;
   background-color: var(--dark-translucent);
   padding: 10px 35px;
   font-weight: 800;
-  margin: 0 3rem;
+  margin: 0 1rem;
   border-radius: 10px;
+  max-width: 315px;
 }
 
 .code-block span {
@@ -152,8 +182,8 @@ main {
 .green {
   color: green;
 }
-.blue {
-  color: lightskyblue;
+.blue, a.blue, li.blue {
+  color: rgb(89, 166, 213);
 }
 .yellow {
   color: yellow;
