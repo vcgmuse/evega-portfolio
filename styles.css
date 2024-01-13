@@ -27,19 +27,21 @@ body {
   background-color: var(--bg-color);
   color: var(--main-font-color);
 }
+ul {
+    list-style-type: none;
+}
 section .title {
     align-self: flex-start; 
     font-size:32px;
-    padding: .5rem 0rem;
-    
+    padding: .5rem 0rem;    
 }
-section .title::after, .user-link::after{
+#coding .title::after, .user-link::after{
     content: "{";
     margin-left: .5rem;
     color: yellow;
 }
 
-section .site::after{
+#coding .site::after{
     content: "}, ";
     margin-left: .5rem;
     font-size: 32px;
@@ -64,7 +66,7 @@ a:link {
 #coding {
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem;
+    margin: 1rem 0rem;
     padding: 1rem;
     gap: .5rem;
     background-color: var(--dark-translucent);
@@ -80,7 +82,7 @@ a:link {
   #coding ul li ul li {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size:20px;
     gap: 1rem;
   }
@@ -180,8 +182,37 @@ main {
   font-weight: 800;
   width: fit-content;
 }
-
-
+#tools, #hobbies {
+    padding: 1rem;
+}
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--banner-bg-color);
+    padding: 1rem;
+    gap: .75rem;
+    border-radius: 15px;
+}
+.tools-grid .card {
+    background-color: var(--img-bg-color);
+    padding: .5rem;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 24px;
+}
+#hobbies {
+    
+}
+#hobbies .tools-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+}
+.hobbies-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 1rem;
+}
 .purple {
   color: purple;
 }
