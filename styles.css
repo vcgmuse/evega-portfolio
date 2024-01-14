@@ -128,6 +128,55 @@ main {
 .profile {
   padding: 0 1rem;
 }
+.business-card{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  color: var(--dark-translucent);
+  font-size: 12px;
+  height: 180px;
+  margin: 0 1rem;
+  padding: 2rem 1rem;
+  gap: .5rem;
+}
+.business-card::before, .business-card::after{
+  content: "";
+  background-color: var(--bg-color);
+  height: 10px;
+  width: 90%;
+  position: absolute;
+}
+.business-card::before{
+  top: 0;
+}
+.business-card::after{
+  bottom: 0;
+}
+.business-card a:link, a:visited{
+  color: var(--dark-translucent);
+}
+.business-card .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.business-card .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: .1rem;
+}
+.business-card .right {
+
+}
+
+.business-card a:link{
+  color: var(--dark-translucent);
+}
 .profile .left {
   display: flex;
   align-items: center;
