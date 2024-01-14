@@ -279,7 +279,7 @@ a:visited {
 }
 .comment {
   position: relative;
-  top: 25%;
+  top: 20%;
   left: 2rem;
   font-size: 12px;
   z-index: 100;
