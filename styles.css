@@ -326,6 +326,7 @@ a:visited {
   color: var(--dark-translucent);
 }
 #message {
+  max-width: 144.8px;
   height: 3rem;
 }
 .purple {
