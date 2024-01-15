@@ -243,6 +243,14 @@ a:visited {
 #tools,
 #hobbies {
   padding: 1rem;
+  font-size: 20px;
+}
+#hobbies li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
 }
 .tools-grid {
   display: grid;
@@ -348,4 +356,8 @@ li.blue {
 }
 .yellow {
   color: yellow;
+}
+.hobby-img{
+  height: 24px;
+  filter: hue-rotate(180);
 }
