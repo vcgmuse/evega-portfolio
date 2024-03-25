@@ -72,7 +72,7 @@ li {
   content: '';
   height: 30rem;
   width: 36%;
-  background-image: url('../newAssets/images/Project_Quest_Alumni_Winter_2024-3_websize.png');
+  background-image: url('./newAssets/images/Project_Quest_Alumni_Winter_2024-3_websize.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top 50px right 75px;
