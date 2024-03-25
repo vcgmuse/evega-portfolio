@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --theme-color: invert(79%) sepia(25%) saturate(824%) hue-rotate(140deg)
+    brightness(84%) contrast(93%);
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: black;
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+/* Banner section */
+#banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#bg-element{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#banner-title {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  background-color: rgba(112, 128, 144, .10);
+  z-index: 2;
+}
+#radial-gradient {
+  display: inline-block;
+  position: absolute;
+  background: radial-gradient(circle at 50% 50%, #59c2d1, #afe9f1 10%, transparent 70%);
+  min-width: 300px;
+  min-height: 300px;
+  opacity: .55;
+  z-index: -10;
+}
+#bg-shape,
+#bg-spots-lines {
+  filter: var(--theme-color);
+  opacity: 0.4;
+}
+#bg-spots-lines {
+  position: absolute;
+  z-index: 1;
+}
+#coder{
+  position: absolute;
+  bottom: 5px;
+  height: 250px;
+}
+#banner-bottom {
+  font-size: 2rem;
+}
+/* Site card section */
+/* This looks good flex row on desktop */
+.card{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+  background-color: rgba(112, 128, 144, .10);
+}
+.card ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 1rem;
+  gap: 2rem;
+}
+a.user-link{
+  color: #59c2d1;
+  background-color: rgba(89, 194, 209,.2);
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: .25rem;
+  padding-left: .5rem;
+  border-radius: 15px;
+  border-bottom: 2px solid gray;
+}
+a.user-link:visited, a.user-link:active{
+  color: #fff;
+}
+a.site-link{
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #59c2d1;
+}
+a.site-link:hover{
+  display: inline-block;
+  transform: scale(1.2);
+  transition: transform 300ms linear
+}
+a.site-link p{
+  max-width: 200px;
+}
+a.site-link:visited, a.site-link:active{
+  color: #fff;
+}
+
+/* Skills Section */
+.tools{
+  display: grid;
+  width: inherit;
+  height: inherit;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.tools .col {
+  display: grid;
+  gap: 75px;
+}
+.mini-card{
+  background-color: rgba(89, 194, 209,.2);
+  border-top: 2px solid #59c2d1;
+  border-bottom: 2px solid #59c2d1;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  width: 120px;
+  height: fit-content;
+  padding: .5rem; 
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Hobbies section */
+.hobbies{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+.hobbies li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+  width: inherit;
+  gap: 2rem;
+
+}
+.hobby-img{
+  height: 32px;
+  margin: .25rem;
+  filter: var(--theme-color);
+}
+
+/* Contact section */
+
+.business-card{
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  padding: 3rem;
+}
+.business-card .left{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.business-card .row{
+  display: flex;  
+}
+.icon{
+  filter: var(--theme-color);
+}

@@ -3,184 +3,173 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --theme-color: invert(79%) sepia(25%) saturate(824%) hue-rotate(140deg)
-    brightness(84%) contrast(93%);
+:root{
+  --text-outline: #464545;
 }
-ul {
-  list-style: none;
+html {
+  font-size: 16px;
+  color: white;
 }
 body {
-  background-color: black;
-  color: #fff;
+  margin: 3rem;
+  background-color: #122a2a;
+}
+a{
+  color: rgb(205, 158, 249);
+  text-shadow: 
+  -1px -1px 0 var(--text-outline),
+  1px -1px 0 var(--text-outline),
+  -1px 1px 0 var(--text-outline),
+  1px 1px 0 var(--text-outline);
 }
 nav {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  margin-bottom: 5rem;
 }
-main{
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  font-size: larger;
+}
+li {
+  position: relative;
+  left: 2rem;
+  font-size: 2rem;
+}
+.left {
+  font-size: 2rem;
+}
+.left h2 {
+  font-size: 1.5rem;
+}
+.right a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-/* Banner section */
-#banner{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-#bg-element{
+  margin: auto;
+  content: '';
+  width: fit-content;
   position: relative;
+}
+#aboutBG {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0;
+  height: 35rem;
+  width: 80rem;
+  opacity: 1;
+  border-radius: 30px;
+  opacity: 1;
 }
-#banner-title {
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 2rem;
-  background-color: rgba(112, 128, 144, .10);
-  z-index: 2;
-}
-#radial-gradient {
-  display: inline-block;
+.about::after {
+  content: '';
+  height: 30rem;
+  width: 36%;
+  background-image: url('./newAssets/images/Project_Quest_Alumni_Winter_2024-3_websize.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top 50px right 75px;
+  background-color: #4c5390;
   position: absolute;
-  background: radial-gradient(circle at 50% 50%, #59c2d1, #afe9f1 10%, transparent 70%);
-  min-width: 300px;
-  min-height: 300px;
-  opacity: .55;
-  z-index: -10;
+  top: 0;
+  left: 0;
+  border-radius: 30px 0 100% 0;
+  opacity: 1;
 }
-#bg-shape,
-#bg-spots-lines {
-  filter: var(--theme-color);
-  opacity: 0.4;
-}
-#bg-spots-lines {
+.about::before {
+  content: '"Let\'s turn your ideas into reality"';
   position: absolute;
-  z-index: 1;
-}
-#coder{
-  position: absolute;
-  bottom: 5px;
-  height: 250px;
-}
-#banner-bottom {
-  font-size: 2rem;
-}
-/* Site card section */
-/* This looks good flex row on desktop */
-.card{
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  padding: 2rem;
-  gap: 2rem;
-  width: 100%;
-  background-color: rgba(112, 128, 144, .10);
-}
-.card ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 1rem;
-  gap: 2rem;
-}
-a.user-link{
-  color: #59c2d1;
-  background-color: rgba(89, 194, 209,.2);
-  text-decoration: none;
+  background-color: #112929;
+  max-width: 15ch;
   font-size: 2.5rem;
-  padding: .25rem;
-  padding-left: .5rem;
+  font-weight: 900;
+  bottom: 10%;
+  left: 75px;
+  color: white;
+  z-index: 5;
+  border-radius: 15px 15px 50% 15px;
+  padding: 1rem;
+  text-align: center center;
+}
+.statement {
+  position: absolute;
+  height: 66%;
+  max-width: 50%;
+  bottom: 15%;
+  right: 75px;
+  padding: 3rem 3rem;
+  background-color: #9a39af;
+  font-size: 2.5rem;
+  font-weight: 900;
+  opacity: 0.75;
   border-radius: 15px;
-  border-bottom: 2px solid gray;
 }
-a.user-link:visited, a.user-link:active{
-  color: #fff;
+.headshot {
+  height: 30cap;
+  border-radius: 30%;
 }
-a.site-link{
-  display: inline-block;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #59c2d1;
-}
-a.site-link:hover{
-  display: inline-block;
-  transform: scale(1.2);
-  transition: transform 300ms linear
-}
-a.site-link p{
-  max-width: 200px;
-}
-a.site-link:visited, a.site-link:active{
-  color: #fff;
-}
-
-/* Skills Section */
-.tools{
-  display: grid;
-  width: inherit;
-  height: inherit;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-.tools .col {
-  display: grid;
-  gap: 75px;
-}
-.mini-card{
-  background-color: rgba(89, 194, 209,.2);
-  border-top: 2px solid #59c2d1;
-  border-bottom: 2px solid #59c2d1;
-  border-radius: 20px;
-  font-size: 1.5rem;
-  width: 120px;
+.code {
+  display: flex;
   height: fit-content;
-  padding: .5rem; 
-  text-align: center;
-  overflow: hidden;
+  margin-top: 2rem;
 }
-
-/* Hobbies section */
-.hobbies{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 8px;
-}
-.hobbies li{
+.circle {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: fit-content;
-  width: inherit;
-  gap: 2rem;
+  height: 120px;
+  width: 15%;
+  margin: auto;
+  background-color: #9a39af;
+  border-radius:0 50% 50% 0;
+  transition: all 1s linear;
+}
+.circle:nth-child(2){
+  border-radius:50% 0 0 50%;
+  background-color: #4c5390;
+}
+.circle.active {
+  width: 82%;
+  height: 300px;
+  padding: 2rem 3rem 3rem;
+  border-radius: 15px;
+  transition: all 1s linear;
 
 }
-.hobby-img{
-  height: 32px;
-  margin: .25rem;
-  filter: var(--theme-color);
+.circle:nth-child(2).active {
+  top: 35%;
+  border-radius: 15px;
 }
-
-/* Contact section */
-
-.business-card{
+.circle ul{
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;  
+}
+.circle h3 {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: aliceblue;
+}
+.circle:nth-child(2) h3{
   display: flex;
-  justify-content: space-between;
-  max-width: 500px;
-  padding: 3rem;
+  justify-content: flex-end;
+  text-align: right;
 }
-.business-card .left{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-.business-card .row{
-  display: flex;  
-}
-.icon{
-  filter: var(--theme-color);
+
+.circle.active ul {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  font-size: .75rem;
+  pointer-events: all;
+  opacity: 1;
+  transition: all .75s linear 1s;
 }
